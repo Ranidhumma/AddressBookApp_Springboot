@@ -7,36 +7,58 @@ import java.util.List;
 
 @Service
 public class AddressBookService implements IAddressBookService {
-
+    List<AddressBookData> addressBookDataList = new ArrayList<>();
     @Override
     public List<AddressBookData> getAddressBookData() {
-        List<AddressBookData> addressBookDataList = new ArrayList<>();
-        addressBookDataList.add(new AddressBookData(1,new AddressBookDTO("Rani","1234567891")));
-        return addressBookDataList;
+            return addressBookDataList;
     }
 
-    @Override
-    public AddressBookData getAddressBookDataById(int personId) {
+        public AddressBookData getAddressBookDataById(int personId) {
             AddressBookData addressBookData = null;
-            addressBookData = new AddressBookData(personId, new AddressBookDTO("Raj", "123456789"));
+            addressBookData = addressBookDataList.get(personId - 1);
             return addressBookData;
         }
+
         public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO){
             AddressBookData addressBookData = null;
-            addressBookData = new AddressBookData(1, addressBookDTO);
+            addressBookData = new AddressBookData(addressBookDataList.size() + 1, addressBookDTO);
+            addressBookDataList.add(addressBookData);
             return addressBookData;
         }
 
         public AddressBookData updateAddressBookData(int personId, AddressBookDTO addressBookDTO){
-            AddressBookData addressBookData = null;
-            addressBookData = new AddressBookData(personId, addressBookDTO);
+            AddressBookData addressBookData = this.getAddressBookDataById(personId);
+            addressBookData.setName(addressBookDTO.name);
+            addressBookData.setPhNumber(addressBookDTO.phNumber);
+            addressBookDataList.set(personId - 1, addressBookData);
             return addressBookData;
         }
 
 
         public void deleteAddressBookData(int personId){
+            int i = 1;
+            addressBookDataList.remove(personId - 1);
+            for (AddressBookData addressBookData : addressBookDataList) {
+                addressBookData.setPersonId(i++);
+            }
+        }
 
         }
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
