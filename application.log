@@ -1709,3 +1709,114 @@ java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
 2022-05-11 16:59:41.281  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
 2022-05-11 16:59:41.281  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
 2022-05-11 17:00:27.805  WARN 2936 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.addressbook.exception.AddressBookException: Address Book ID Not Found]
+2022-05-11 17:18:42.743  INFO 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 7872 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 17:18:42.746 DEBUG 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 17:18:42.746  INFO 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 17:18:47.884  WARN 7872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 17:18:48.478  INFO 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.734 seconds (JVM running for 8.668)
+2022-05-11 17:18:48.494  INFO 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 17:18:48.494  INFO 7872 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-11 17:20:37.285 ERROR 7872 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ValidationException: HV000032: Unable to initialize org.hibernate.validator.internal.constraintvalidators.bv.PatternValidator.] with root cause
+
+java.util.regex.PatternSyntaxException: Unclosed character class near index 25
+^[91]+[]?[6-9]{1}[0-9]{9}$
+                         ^
+	at java.base/java.util.regex.Pattern.error(Pattern.java:2028) ~[na:na]
+	at java.base/java.util.regex.Pattern.clazz(Pattern.java:2690) ~[na:na]
+	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2139) ~[na:na]
+	at java.base/java.util.regex.Pattern.expr(Pattern.java:2069) ~[na:na]
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1783) ~[na:na]
+	at java.base/java.util.regex.Pattern.<init>(Pattern.java:1430) ~[na:na]
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1095) ~[na:na]
+	at org.hibernate.validator.internal.constraintvalidators.bv.PatternValidator.initialize(PatternValidator.java:40) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.constraintvalidators.bv.PatternValidator.initialize(PatternValidator.java:24) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.AbstractConstraintValidatorManagerImpl.initializeValidator(AbstractConstraintValidatorManagerImpl.java:142) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.AbstractConstraintValidatorManagerImpl.createAndInitializeValidator(AbstractConstraintValidatorManagerImpl.java:90) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintValidatorManagerImpl.getInitializedValidator(ConstraintValidatorManagerImpl.java:117) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:136) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:54) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-6.2.3.Final.jar:6.2.3.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:109) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-2.6.7.jar:2.6.7]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:933) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:250) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-05-11 17:22:09.553  INFO 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 11164 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 17:22:09.618 DEBUG 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 17:22:09.618  INFO 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 17:22:14.450  WARN 11164 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 17:22:15.106  INFO 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.503 seconds (JVM running for 8.326)
+2022-05-11 17:22:15.106  INFO 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 17:22:15.106  INFO 11164 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-11 17:39:18.726  INFO 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 8796 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 17:39:18.819 DEBUG 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 17:39:18.819  INFO 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 17:39:23.785  WARN 8796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 17:39:24.456  INFO 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.633 seconds (JVM running for 8.679)
+2022-05-11 17:39:24.456  INFO 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 17:39:24.472  INFO 8796 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-11 17:41:16.158  WARN 8796 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.addAddressBookData(com.bridgelabz.addressbook.dto.AddressBookDTO) with 8 errors: [Field error in object 'addressBookDTO' on field 'email': rejected value [null]; codes [NotEmpty.addressBookDTO.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.email,email]; arguments []; default message [email]]; default message [email should not be empty]] [Field error in object 'addressBookDTO' on field 'address': rejected value [null]; codes [NotEmpty.addressBookDTO.address,NotEmpty.address,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.address,address]; arguments []; default message [address]]; default message [Address should not be empty]] [Field error in object 'addressBookDTO' on field 'firstName': rejected value [null]; codes [NotEmpty.addressBookDTO.firstName,NotEmpty.firstName,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.firstName,firstName]; arguments []; default message [firstName]]; default message [FirstName  cannot be null]] [Field error in object 'addressBookDTO' on field 'state': rejected value [null]; codes [NotEmpty.addressBookDTO.state,NotEmpty.state,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.state,state]; arguments []; default message [state]]; default message [State name  cannot be null]] [Field error in object 'addressBookDTO' on field 'lastName': rejected value [null]; codes [NotEmpty.addressBookDTO.lastName,NotEmpty.lastName,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.lastName,lastName]; arguments []; default message [lastName]]; default message [LastName cannot be null]] [Field error in object 'addressBookDTO' on field 'phNumber': rejected value [456876]; codes [Pattern.addressBookDTO.phNumber,Pattern.phNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phNumber,phNumber]; arguments []; default message [phNumber],[Ljavax.validation.constraints.Pattern$Flag;@be334aa,^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$]; default message [phonenumber is invalid]] [Field error in object 'addressBookDTO' on field 'zip': rejected value [null]; codes [NotEmpty.addressBookDTO.zip,NotEmpty.zip,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.zip,zip]; arguments []; default message [zip]]; default message [Zip code must not be null]] [Field error in object 'addressBookDTO' on field 'city': rejected value [null]; codes [NotEmpty.addressBookDTO.city,NotEmpty.city,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.city,city]; arguments []; default message [city]]; default message [City name cannot be null]] ]
+2022-05-11 17:44:08.676  WARN 8796 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.addAddressBookData(com.bridgelabz.addressbook.dto.AddressBookDTO) with 3 errors: [Field error in object 'addressBookDTO' on field 'address': rejected value [null]; codes [NotEmpty.addressBookDTO.address,NotEmpty.address,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.address,address]; arguments []; default message [address]]; default message [Address should not be empty]] [Field error in object 'addressBookDTO' on field 'city': rejected value [solapur]; codes [Pattern.addressBookDTO.city,Pattern.city,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.city,city]; arguments []; default message [city],[Ljavax.validation.constraints.Pattern$Flag;@be334aa,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [City name is Invalid]] [Field error in object 'addressBookDTO' on field 'phNumber': rejected value [99222002]; codes [Pattern.addressBookDTO.phNumber,Pattern.phNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phNumber,phNumber]; arguments []; default message [phNumber],[Ljavax.validation.constraints.Pattern$Flag;@be334aa,^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$]; default message [phonenumber is invalid]] ]
+2022-05-11 18:11:38.785  INFO 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 10256 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 18:11:38.799 DEBUG 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 18:11:38.799  INFO 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 18:11:43.909  WARN 10256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 18:11:44.502  INFO 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.586 seconds (JVM running for 8.412)
+2022-05-11 18:11:44.518  INFO 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 18:11:44.518  INFO 10256 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 

@@ -50,11 +50,10 @@ public class AddressBookController {
         ResponseDTO responseDTO = new ResponseDTO("Updated AddressBook Data for: ", addressBookData);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
-
-    @DeleteMapping("/delete/{personId}")
-    public ResponseEntity<ResponseDTO> deleteAddressBookData(@PathVariable("personId") int personId) {
-        ResponseDTO responseDTO = new ResponseDTO("Deleted data successfully", "person id: " + personId);
-        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
-    }
-
+        @DeleteMapping("/delete/{personId}")
+            public ResponseEntity<ResponseDTO> deleteAddressBookData(@PathVariable("personId") int personId) {
+                addressBookService.deleteAddressBookData(personId);
+                ResponseDTO responseDTO= new ResponseDTO("Deleted data successfully","person id: "+personId);
+                return new ResponseEntity<>(responseDTO,HttpStatus.OK);
+            }
 }

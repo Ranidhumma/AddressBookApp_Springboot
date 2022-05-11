@@ -33,8 +33,7 @@ public class AddressBookService implements IAddressBookService {
 
     public AddressBookData updateAddressBookData(int personId, AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = this.getAddressBookDataById(personId);
-        addressBookData.setName(addressBookDTO.name);
-        addressBookData.setPhNumber(addressBookDTO.phNumber);
+        addressBookData.updateAddressBookdata(addressBookDTO);
         addressBookDataList.set(personId - 1, addressBookData);
         return addressBookData;
     }
