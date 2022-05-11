@@ -1,5 +1,6 @@
 package com.bridgelabz.addressbook.service;
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
+import com.bridgelabz.addressbook.exception.AddressBookException;
 import com.bridgelabz.addressbook.model.AddressBookData;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -14,9 +15,14 @@ public class AddressBookService implements IAddressBookService {
     }
 
         public AddressBookData getAddressBookDataById(int personId) {
-            AddressBookData addressBookData = null;
-            addressBookData = addressBookDataList.get(personId - 1);
-            return addressBookData;
+                return addressBookDataList.stream()
+                        .filter(addressBookData -> addressBookData.getPersonId() == personId)
+                        .findFirst()
+                        .orElseThrow(() -> new AddressBookException("Address Book ID Not Found"));
+
+//            AddressBookData addressBookData = null;
+//            addressBookData = addressBookDataList.get(personId - 1);
+//            return addressBookData;
         }
 
         public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO){
