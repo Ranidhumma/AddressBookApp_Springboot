@@ -21,6 +21,11 @@ import java.util.stream.Collectors;
             ResponseDTO responseDTO = new ResponseDTO("Exception While processing REST Request",errMesg);
             return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
         }
+        @ExceptionHandler(AddressBookException.class)
+        public ResponseEntity<ResponseDTO> handleMethodAddressBookException(AddressBookException exception){
+            ResponseDTO responseDTO = new ResponseDTO("Exception While processing REST Request",exception.getMessage());
+            return new ResponseEntity<>(responseDTO,HttpStatus.BAD_REQUEST);
+        }
 
     }
 
