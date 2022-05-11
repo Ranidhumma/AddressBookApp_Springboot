@@ -1441,3 +1441,10 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2022-05-11 15:06:27.098  INFO 9884 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 8.26 seconds (JVM running for 11.33)
 2022-05-11 15:06:27.105  INFO 9884 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
 2022-05-11 15:06:27.107  INFO 9884 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-11 15:14:23.373  INFO 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 6684 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 15:14:23.376 DEBUG 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 15:14:23.378  INFO 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 15:14:29.066  WARN 6684 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 15:14:29.808  INFO 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 7.342 seconds (JVM running for 9.681)
+2022-05-11 15:14:29.815  INFO 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 15:14:29.818  INFO 6684 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
