@@ -23,8 +23,7 @@ public @Data class AddressBookData {
     private String email;
 
 
-    public AddressBookData(int personId, AddressBookDTO addressBookDTO) {
-        this.personId = personId;
+    public AddressBookData(AddressBookDTO addressBookDTO) {
         this.updateAddressBookdata(addressBookDTO);
     }
 

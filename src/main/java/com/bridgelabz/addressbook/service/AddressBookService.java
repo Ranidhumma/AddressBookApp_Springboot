@@ -21,43 +21,36 @@ public class AddressBookService implements IAddressBookService {
 
     @Override
     public List<AddressBookData> getAddressBookData() {
-        return addressBookDataList;
+        return addressBookRepository.findAll();
     }
 
     public AddressBookData getAddressBookDataById(int personId) {
-        return addressBookDataList.stream()
-                .filter(addressBookData -> addressBookData.getPersonId() == personId)
-                .findFirst()
-                .orElseThrow(() -> new AddressBookException("Address Book ID Not Found"));
+        return addressBookRepository
+                .findById(personId)
+                .orElseThrow(() -> new AddressBookException("Person with perssonId " + personId + " doesnot exists"));
     }
 
     public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = null;
-        //dressBookDataList.add(addressBookData);
-        addressBookData = new AddressBookData(addressBookDataList.size() + 1, addressBookDTO);
-        log.debug("AddressBookData: " + addressBookData.toString());
-        addressBookDataList.add(addressBookData);
+        addressBookData = new AddressBookData(addressBookDTO);
+        log.debug("AddressBookData: "+addressBookData.toString());
         return addressBookRepository.save(addressBookData);
-
     }
 
     public AddressBookData updateAddressBookData(int personId, AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = this.getAddressBookDataById(personId);
         addressBookData.updateAddressBookdata(addressBookDTO);
-        addressBookDataList.set(personId - 1, addressBookData);
-        return addressBookData;
+        return addressBookRepository.save(addressBookData);
     }
 
 
     public void deleteAddressBookData(int personId) {
-        int i = 1;
-        addressBookDataList.remove(personId - 1);
-        for (AddressBookData addressBookData : addressBookDataList) {
-            addressBookData.setPersonId(i++);
+        AddressBookData addressBookData = this.getAddressBookDataById(personId);
 
-        }
+        addressBookRepository.delete(addressBookData);
     }
 }
+
 
 
 
