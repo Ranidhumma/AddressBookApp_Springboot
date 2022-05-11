@@ -1667,6 +1667,7 @@ java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
 2022-05-11 16:26:13.674  INFO 10248 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
 2022-05-11 16:26:13.674  INFO 10248 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
 2022-05-11 16:27:55.626  WARN 10248 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.addressbook.exception.AddressBookException: Address Book ID Not Found]
+<<<<<<< HEAD
 2022-05-11 16:39:58.583  INFO 10000 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 10000 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
 2022-05-11 16:39:58.586 DEBUG 10000 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
 2022-05-11 16:39:58.586  INFO 10000 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
@@ -1698,3 +1699,13 @@ java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
 2022-05-11 16:46:57.144  INFO 3088 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
 2022-05-11 16:46:57.144  INFO 3088 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
 2022-05-11 16:48:02.631  WARN 3088 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.addressbook.exception.AddressBookException: Address Book ID Not Found]
+=======
+>>>>>>> Section4_UC3_throwUserFriendlyErrors_If_Id_notFound
+2022-05-11 16:59:35.173  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 2936 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-11 16:59:35.252 DEBUG 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-11 16:59:35.252  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-11 16:59:40.656  WARN 2936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 16:59:41.281  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.98 seconds (JVM running for 8.963)
+2022-05-11 16:59:41.281  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-11 16:59:41.281  INFO 2936 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-11 17:00:27.805  WARN 2936 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.addressbook.exception.AddressBookException: Address Book ID Not Found]

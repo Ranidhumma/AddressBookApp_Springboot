@@ -45,11 +45,9 @@ public class AddressBookService implements IAddressBookService {
         addressBookDataList.remove(personId - 1);
         for (AddressBookData addressBookData : addressBookDataList) {
             addressBookData.setPersonId(i++);
+
         }
-    }
-
-}
-
+}}
 
 
 
