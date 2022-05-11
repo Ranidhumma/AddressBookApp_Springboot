@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
 
 /*Created a Rest Controller to demonstrate the various HTTP Methods*/
@@ -34,18 +36,18 @@ public class AddressBookController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<ResponseDTO> addAddressBookData(@RequestBody AddressBookDTO addressBookDTO) {
+    public ResponseEntity<ResponseDTO> addAddressBookData(@Valid @RequestBody AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = null;
         addressBookData = new AddressBookData(1,addressBookDTO);
-        ResponseDTO responseDTO = new ResponseDTO("Created Employee Payroll Data for: ",addressBookData);
+        ResponseDTO responseDTO = new ResponseDTO("Created AddressBook Data for: ",addressBookData);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
 
     @PutMapping("/update/{personId}")
-    public ResponseEntity<ResponseDTO> updateAddressBookData(@PathVariable int personId,@RequestBody AddressBookDTO addressBookDTO){
+    public ResponseEntity<ResponseDTO> updateAddressBookData(@PathVariable int personId, @Valid @RequestBody AddressBookDTO addressBookDTO){
         AddressBookData addressBookData = null;
         addressBookData = new AddressBookData(personId,addressBookDTO);
-        ResponseDTO responseDTO = new ResponseDTO("Updated Employee Payroll Data for: ",addressBookData);
+        ResponseDTO responseDTO = new ResponseDTO("Updated AddressBook Data for: ",addressBookData);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
 
