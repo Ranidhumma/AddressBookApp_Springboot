@@ -1,5 +1,5 @@
 package com.bridgelabz.addressbook.controller;
-import com.bridgelabz.addressbook.AddressBookDTO;
+import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.dto.ResponseDTO;
 import com.bridgelabz.addressbook.model.AddressBookData;
 import com.bridgelabz.addressbook.service.IAddressBookService;
@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 /*Created a Rest Controller to demonstrate the various HTTP Methods*/

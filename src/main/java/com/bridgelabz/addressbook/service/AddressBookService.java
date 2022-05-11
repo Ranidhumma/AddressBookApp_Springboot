@@ -1,5 +1,5 @@
 package com.bridgelabz.addressbook.service;
-import com.bridgelabz.addressbook.AddressBookDTO;
+import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.model.AddressBookData;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;

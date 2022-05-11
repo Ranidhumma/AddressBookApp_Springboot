@@ -1,7 +1,7 @@
-package com.bridgelabz.addressbook;
+package com.bridgelabz.addressbook.dto;
+import lombok.Data;
 
-public class AddressBookDTO {
-
+public @Data class AddressBookDTO {
     public String name;
     public String phNumber;
 
@@ -10,11 +10,8 @@ public class AddressBookDTO {
         this.phNumber = phNumber;
     }
 
-    @Override
-    public String toString() {
-        return "AddressBookDTO{" +
-                "name='" + name + '\'' +
-                ", phNumber=" + phNumber +
-                '}';
-    }
 }
+
+
+		
+

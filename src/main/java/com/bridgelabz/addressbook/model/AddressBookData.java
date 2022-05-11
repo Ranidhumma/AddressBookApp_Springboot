@@ -1,10 +1,8 @@
 package com.bridgelabz.addressbook.model;
-
-import com.bridgelabz.addressbook.AddressBookDTO;
+import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import lombok.Data;
 
-@Data
-public class AddressBookData {
+public @Data class AddressBookData {
     private  int personId;
 
     private String name;
@@ -18,13 +16,4 @@ public class AddressBookData {
     }
 
 
-
-    @Override
-    public String toString() {
-        return "AddressbookData{" +
-                "personId=" + personId +
-                ", name='" + name + '\'' +
-                ", phNumber='" + phNumber + '\'' +
-                '}';
     }
-}
