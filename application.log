@@ -2152,3 +2152,11 @@ Caused by: java.lang.IllegalStateException: Using named parameters for method pu
 2022-05-18 19:03:49.233  INFO 10800 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 8.844 seconds (JVM running for 10.895)
 2022-05-18 19:03:49.239  INFO 10800 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
 2022-05-18 19:03:49.241  INFO 10800 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-18 19:44:29.779  INFO 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.1 on DESKTOP-49TJK3H with PID 7496 (F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot\target\classes started by SHREE in F:\Springfolder\SpringRestAPIPrograms\AddressBookApp_Springboot)
+2022-05-18 19:44:29.839 DEBUG 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-18 19:44:29.839  INFO 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-18 19:44:37.989  WARN 7496 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-18 19:44:38.656  INFO 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 9.758 seconds (JVM running for 11.909)
+2022-05-18 19:44:38.656  INFO 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in DEV Environment
+2022-05-18 19:44:38.671  INFO 7496 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook DB User is root 
+2022-05-18 19:45:41.107  WARN 7496 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]

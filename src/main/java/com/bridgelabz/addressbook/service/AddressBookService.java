@@ -50,7 +50,7 @@ public class AddressBookService implements IAddressBookService {
     @Override
     public AddressBookData updateAddressBookData(int personId, AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = this.getAddressBookDataById(personId);
-        addressBookData = new AddressBookData(addressBookDTO);
+        addressBookData.updateAddressBookdata(addressBookDTO);
         return addressBookRepository.save(addressBookData);
     }
     /**
