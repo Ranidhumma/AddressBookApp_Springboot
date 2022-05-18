@@ -1,7 +1,29 @@
 package com.bridgelabz.addressbook.repository;
 import com.bridgelabz.addressbook.model.AddressBookData;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+
+import java.util.List;
 
 public interface AddressBookRepository extends JpaRepository<AddressBookData,Integer> {
+    @Query(value = "select * from address_book_contact where city = :city",nativeQuery = true)
+    List<AddressBookData> findAllByCity(String city);
 
+    @Query(value = "select * from address_book_contact order by city" , nativeQuery = true)
+    List<AddressBookData> SortByCity();
+
+    @Query(value = "select * from address_book_contact where state = :state",nativeQuery = true)
+    List<AddressBookData> findAllByState(String state);
+    @Query(value = "select * from address_book_contact order by state",nativeQuery = true)
+    List<AddressBookData> sortByState();
+
+    @Query(value = "select * from address_book_contact where zip = :zip",nativeQuery = true)
+    List<AddressBookData> findAllByZip(String zip);
+    @Query(value = "select * from address_book_contact order by zip",nativeQuery = true)
+    List<AddressBookData> sortByZip();
+
+    @Query(value = "select * from address_book_contact order by first_Name",nativeQuery = true)
+    List<AddressBookData> sortByName();
 }
+

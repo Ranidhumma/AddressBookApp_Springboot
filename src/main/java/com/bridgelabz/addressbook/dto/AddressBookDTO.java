@@ -2,6 +2,7 @@ package com.bridgelabz.addressbook.dto;
 import lombok.ToString;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import java.util.List;
 
 
 public @ToString class AddressBookDTO {
@@ -16,8 +17,6 @@ public @ToString class AddressBookDTO {
     @NotEmpty(message = "Address should not be empty")
     public String address;
 
-    @Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "City name is Invalid")
-    @NotEmpty(message = "City name cannot be null")
     public String city;
 
     @Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "state name is Invalid")
