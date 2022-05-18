@@ -77,7 +77,7 @@ public class AddressBookService implements IAddressBookService {
         return addressBookRepository.SortByCity();
     }
     /**
-     * @Purpose to get AddressBook data by state
+     * @Purpose to get AddressBook data by State
      */
     @Override
     public List<AddressBookData> getAddressBookByState(String state) {
